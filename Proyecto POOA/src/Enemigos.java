@@ -30,15 +30,23 @@ public class Enemigos extends JPanel implements Runnable {
 		try {
 			while (true) {
 				/*
-				 * x tiene el valor del tamano de la ventana, al iniciar el
-				 * valor de x va disminuyendo el cual la imagen va recorriendose
-				 * ala derecha hasta que tope con el marco.
+				 * MOVIMIENTO DE ENEMIGO EN EL CAMPO SIN DESAPARECER x tiene el
+				 * valor del tamano de la ventana, al iniciar el valor de x va
+				 * disminuyendo el cual la imagen va recorriendose ala derecha
+				 * hasta que tope con el marco. Al llegar a x=0 , se ejecutara
+				 * la siguiente condicion
 				 */
 				while (x > 10) {
 					Thread.sleep(150);
 					x -= 10;
 					repaint();
-					System.out.print("derecha" + x);
+					// System.out.print("derecha" + x);
+				}
+				while (x < 800) {
+					Thread.sleep(150);
+					x += 10;
+					repaint();
+					// System.out.print("izq\n" + x);
 				}
 
 			}
