@@ -30,23 +30,24 @@ public class Enemigos extends JPanel implements Runnable {
 		try {
 			while (true) {
 				/*
-				 * MOVIMIENTO DE ENEMIGO EN EL CAMPO SIN DESAPARECER x tiene el
-				 * valor del tamano de la ventana, al iniciar el valor de x va
-				 * disminuyendo el cual la imagen va recorriendose ala derecha
-				 * hasta que tope con el marco. Al llegar a x=0 , se ejecutara
-				 * la siguiente condicion
+				 * MOVIMIENTO DE ENEMIGO X es una constante fija: Es el valor
+				 * del tamano dela ventana, las condiciones siguientes, se
+				 * ejecutaran hasta que el valor de x cambie consecutivamente y
+				 * cumpla la condicion; Es decir al llegar al marco contrario
+				 * cambiara de direccion (izquierda derecha).
+				 * 
 				 */
 				while (x > 10) {
 					Thread.sleep(150);
 					x -= 10;
 					repaint();
-					// System.out.print("derecha" + x);
+					// System.out.print("izq" + x);
 				}
 				while (x < 800) {
 					Thread.sleep(150);
 					x += 10;
 					repaint();
-					// System.out.print("izq\n" + x);
+					// System.out.print("derecha\n" + x);
 				}
 
 			}
